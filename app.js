@@ -14,4 +14,10 @@ function calculateGrade(){
     
     var gradeValue = document.getElementById('input').value;
     var inputGrade = input.value;
+    
+    if(inputGrade <= 100){
+        span = "A";
+    }
+    
+    
 }
