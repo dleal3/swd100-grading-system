@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Grading System</title>
-    </head>
-    
-    <body>
-        <form>
-            <input id="input" type="number" max="100">
-        </form>
-        
-        <button onclick="calculateGrade()" class="grade">Grade</button>
-        <div class="grade-list">
-            <p> Grade: <span id="grade-letter"></span></p>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="stylesheet.css">
+    <title>Grading System</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Grade Calculator</h1>
+        <div>Please Enter Your Numeric Grade:</div>
+        <br>
+        <div>
+          <input id="grades"></input>
         </div>
-        
-        <p>Average Grade: <span id="average"></span></p>
-        
-        
-    </body>
+        <br>
+        <br>
+        <p>Your Letter Grades Are:</p>
+        <div id="calculated-grades"></div>
+  </div> <!-- End of wrapper div -->
+
+  <script>
+   $(function() {
+          $("#grades").keyup(function() { // keyup is best for real time calculations
+              // Get the grades into an array
+              var grades = $("#grades").val().trim(); // Does not work without the "trim"
+              grades = grades.split(/\s+/);
+              var message = ''; // Start with no message.
+              // start of for loop...
+              for (var i in grades) {
+                  // Convert the numbers into the letters
+                  var test_grade = grades[i];
+                  var grade = '';
+                  console.log('grades.length '+ grades.length);
+                  console.log('test_grade.length '+ test_grade.length);
+                  if ((grades.length == 1) && (test_grade.length == 0)) { // Ignore shift or spacebar entries
+                      break;
+                  } else if (isNaN(test_grade) && (test_grade.length > 0)) { // Entries that are non-numerical
+                      message = "<strong>ERROR</strong> - Please only enter numerical value between 0 & 100.";
+                      break;
+                  } else if (test_grade < 0) { //Entries below zero - invalid
+                      message = "<strong>ERROR</strong> - Valid grades are 0 - 100.";
+                      break;
+                  } else if ((test_grade < 60) && (test_grade >= 0)) {
+                      grade = "F";
+                  } else if (test_grade < 70) {
+                      grade = "D";
+                  } else if (test_grade < 80) {
+                      grade = "C";
+                  } else if (test_grade < 90) {
+                      grade = "B";
+                  } else if (test_grade <= 100) {
+                      grade = "A";
+                  } else if (test_grade > 100) { // Entries over 100 - invalid
+                      message = "<strong>ERROR</strong> - Valid grades are 0 - 100.";
+                      break;
+                  }
+                  message += grade + " ";
+              } // end of loop
+              $("#calculated-grades").html(message);
+          });
+   });
+  </script>
+
+</body>
 </html>
