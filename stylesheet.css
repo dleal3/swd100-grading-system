@@ -1,6 +1,9 @@
 body {
-  background-image: url("http://blogs.sd41.bc.ca/lss/files/2014/09/clipart-pencil-checklist11.gif");
+  background: url("https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/EmptyChalkboard.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: black;
+  
 }
 
 .wrapper {
@@ -10,6 +13,7 @@ body {
   font-family: Georgia;
   text-align: center;
   font-weight: bold;
+  padding-top: 15%;
 }
 
 h1 {
