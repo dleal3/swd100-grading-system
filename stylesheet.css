@@ -1,0 +1,41 @@
+body {
+  background-image: url("http://blogs.sd41.bc.ca/lss/files/2014/09/clipart-pencil-checklist11.gif");
+  color: black;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  font-family: Georgia;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 1em;
+  font-family: Georgia;
+}
+
+.directions {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#calculated-grades {
+  font-size:1.3em;
+  font-weight:bold;
+  line-height:1.8em;
+}
+
+#grades {
+  font-size: 1.1em;
+  border: 2px solid black;
+}
