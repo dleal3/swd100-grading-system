@@ -7,3 +7,9 @@ var span = "";
 var gradeArray = [];
 var average = 0;
 var sumArr = 0;
+
+
+
+function calculateGrade(){
+    
+}
