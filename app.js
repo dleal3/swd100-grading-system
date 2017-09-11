@@ -12,4 +12,6 @@ var sumArr = 0;
 
 function calculateGrade(){
     
+    var gradeValue = document.getElementById('input').value;
+    
 }
