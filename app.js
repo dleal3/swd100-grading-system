@@ -27,4 +27,12 @@ function calculateGrade(){
         span ="C";
     }
     
+    if(inputGrade <=69){
+        span ="D";
+    }
+    
+    if(inputGrade <=59){
+        span ="F";
+    }
+    
 }
