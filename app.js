@@ -35,4 +35,10 @@ function calculateGrade(){
         span ="F";
     }
     
+    
+    document.getElementById('grade-letter').innerHTML = span;
+    document.getElementById('average').innerHTML = average; 
+    
+    
+    
 }
