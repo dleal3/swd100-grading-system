@@ -19,5 +19,12 @@ function calculateGrade(){
         span = "A";
     }
     
+    if(inputGrade <= 89){
+        span = "B";
+    }
+    
+    if(inputGrade <= 79){
+        span ="C";
+    }
     
 }
