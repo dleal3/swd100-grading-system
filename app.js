@@ -39,6 +39,14 @@ function calculateGrade(){
     document.getElementById('grade-letter').innerHTML = span;
     document.getElementById('average').innerHTML = average; 
     
+    document.getElementById('input').value = '';
+    
+    
+    
+    for (i = 0; i < gradeArray.length; i++) {
+      sumArr += +gradeArray[i];
+      console.log(sumArr);
+   }
     
     
 }
